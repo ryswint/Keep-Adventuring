@@ -429,13 +429,8 @@ void Ending()
 	system("Color 17");
 	Report("-*H.E.R.O.S. NARRATION APPLICATION*-", 0);
 	cout << endl;
-	if (totalTreasure == 0)
-	{
-		Report("You set the shuttle for self destruct, you have no time for this nonsense!");
-		Report("You don't have time to get beat up and find crystals.");
-		Report("Time to end it all!");
-	}
-	else if (health <= 0)
+
+	if (health <= 0)
 	{
 		Report("You are quickly fading out.");
 		Report("You have failed your Commander, your ship, and yourself.");
@@ -444,6 +439,12 @@ void Ending()
 		cout << totalTreasure << " crystals.";
 		Report("But you had to look like a big boy, didn't you?");
 		Report("Your mind focuses on the image of Susan from Engineering as everything fades to black...");
+	}
+	else if (totalTreasure == 0)
+	{
+		Report("You set the shuttle for self destruct, you have no time for this nonsense!");
+		Report("You don't have time to get beat up and find crystals.");
+		Report("Time to end it all!");
 	}
 	else
 	{
